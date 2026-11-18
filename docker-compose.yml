@@ -46,3 +46,11 @@ services:
       - "4317:4317"
     networks:
       - observability-net
+
+  app:
+    build: ./app
+    container_name: observability-app
+    ports:
+      - "5000:5000"
+    networks:
+      - observability-net
